@@ -451,6 +451,9 @@
     <!-- Blur radius behind Notification Shade -->
     <dimen name="max_shade_window_blur_radius">17dp</dimen>
 
+    <!-- Burn-in potection in true ambient mode. -->
+    <bool name="config_enableBurnInProtection">true</bool>        
+
     <!-- Whether device has warp charging support -->
     <bool name="config_hasWarpCharger">true</bool>
 
