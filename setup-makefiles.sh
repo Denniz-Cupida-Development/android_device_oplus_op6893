@@ -18,7 +18,7 @@
 
 set -e
 
-export DEVICE=mt6893-common
+export DEVICE=MT6893
 export VENDOR=oplus
 
 INITIAL_COPYRIGHT_YEAR=2021

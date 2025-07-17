@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-COMMON_PATH := device/oplus/mt6893-common
+DEVICE_PATH := device/oplus/MT6893
 
 # Architecture
 TARGET_ARCH := arm64
@@ -49,6 +49,9 @@ BOARD_AVB_VBMETA_VENDOR_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX := 1
 BOARD_AVB_VBMETA_VENDOR_ROLLBACK_INDEX_LOCATION := 3
 
+# Assertation
+TARGET_OTA_ASSERT_DEVICE := denniz,OP515BL1,cupida,RMX3031,RMX3033
+
 # Bootloader
 BOARD_HAS_MTK_HARDWARE := true
 TARGET_BOOTLOADER_BOARD_NAME := oplus6893
@@ -59,12 +62,12 @@ TARGET_SCREEN_DENSITY := 411
 
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
-    $(COMMON_PATH)/configs/vintf/device_framework_matrix.xml
+    $(DEVICE_PATH)/configs/vintf/device_framework_matrix.xml
 
 # Compatibility matrix
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/configs/vintf/framework_compatibility_matrix.xml
-DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/vintf/compatibility_matrix.xml
-DEVICE_MANIFEST_FILE := $(COMMON_PATH)/configs/vintf/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/framework_compatibility_matrix.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
 
 # Kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
@@ -80,6 +83,8 @@ BOARD_BOOT_HEADER_VERSION := 2
 BOARD_KERNEL_IMAGE_NAME := Image.gz
 TARGET_KERNEL_CLANG_VERSION := r522817
 TARGET_KERNEL_SOURCE := kernel/oplus/mt6893
+TARGET_KERNEL_CONFIG := cupida_defconfig
+BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilt/dtbo.img
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --tags_offset $(BOARD_KERNEL_TAGS_OFFSET)
 BOARD_MKBOOTIMG_ARGS += --dtb_offset $(BOARD_DTB_OFFSET)
@@ -120,9 +125,9 @@ BOARD_SUPER_PARTITION_SIZE := 10200547328
 BOARD_SUPER_PARTITION_GROUPS := main
 
 # Properties
-TARGET_VENDOR_PROP += $(COMMON_PATH)/configs/props/vendor.prop
-TARGET_SYSTEM_PROP += $(COMMON_PATH)/configs/props/system.prop
-TARGET_PRODUCT_PROP += $(COMMON_PATH)/configs/props/product.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/props/vendor.prop
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/configs/props/system.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/configs/props/product.prop
 
 # Power
 TARGET_TAP_TO_WAKE_NODE := /proc/touchpanel/double_tap_enable
@@ -130,7 +135,7 @@ TARGET_TAP_TO_WAKE_NODE := /proc/touchpanel/double_tap_enable
 # Recovery
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.mt6893
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6893
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
@@ -140,7 +145,7 @@ TARGET_RECOVERY_UI_MARGIN_HEIGHT := 90
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS ?= $(COMMON_PATH)/releasetools
+TARGET_RELEASETOOLS_EXTENSIONS ?= $(DEVICE_PATH)/releasetools
 
 # Reserve space for gapps install
 -include vendor/lineage/config/BoardConfigReservedSize.mk
@@ -150,9 +155,9 @@ VENDOR_SECURITY_PATCH := 2023-03-05
 
 # Sepolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
-SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/private
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
-BOARD_SEPOLICY_DIRS  += $(COMMON_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
+BOARD_SEPOLICY_DIRS  += $(DEVICE_PATH)/sepolicy/vendor
 SELINUX_IGNORE_NEVERALLOWS := true  # TODO: DROP THIS
 
 # Vibrator
@@ -171,6 +176,3 @@ WIFI_DRIVER_STATE_ON := 1
 WIFI_DRIVER_STATE_OFF := 0
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
-
-# inherit from the proprietary version
-include vendor/oplus/mt6893-common/BoardConfigVendor.mk

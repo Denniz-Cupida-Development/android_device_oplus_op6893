@@ -18,7 +18,7 @@
 
 set -e
 
-export DEVICE=mt6893-common
+export DEVICE=MT6893
 export VENDOR=oplus
 
 # Load extract_utils and do some sanity checks
@@ -43,7 +43,7 @@ function blob_fixup {
         vendor/lib*/hw/audio.primary.mt6893.so)
              "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v31.so" "${2}"
              "${PATCHELF}" --replace-needed "libtinyalsa.so" "libtinyalsa-v32.so" "${2}"
-             ;;
+            ;;
         vendor/bin/hw/android.hardware.media.c2@1.2-mediatek|vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b)
 	    [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libcodec2_hidl@1.0.so" "${2}"
@@ -92,9 +92,29 @@ function blob_fixup {
             ;;
         vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron|vendor/lib*/libnvram.so|odm/bin/hw/vendor.oplus.hardware.charger@1.0-service|vendor/lib64/libsysenv.so)
              grep -q "libbase_shim.so" "${2}" || "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
-             ;;
+            ;;
         vendor/lib64/hw/hwcomposer.mt6893.so|vendor/lib64/libutils_v32.so)
              grep -q "libprocessgroup_shim.so" "${2}" || "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "${2}"
+            ;;
+        vendor/lib*/libmtkcam_stdutils.so)
+            "$PATCHELF" --replace-needed libutils.so libutils_v32.so "$2"
+            ;;
+        vendor/bin/hw/camerahalserver)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils_v32.so" "${2}"
+            "${PATCHELF}" --replace-needed "libbinder.so" "libbinder_v32.so" "${2}"
+            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase_v32.so" "${2}"
+            ;;
+        vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so)
+            grep -q "libcamera_metadata_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcamera_metadata_shim.so" "${2}"
+            ;;
+        odm/lib*/libui_oplus.so)
+            "$PATCHELF" --replace-needed android.hardware.graphics.common-V2-ndk_platform.so android.hardware.graphics.common-V2-ndk.so "$2"
+            ;;
+        vendor/lib*/libmtkisp_metadata.so)
+            "${PATCHELF}" --replace-needed "libui.so" "libui_oplus.so" "${2}"
+            ;;
+        vendor/lib64/libcam.utils.sensorprovider.so)
+            "${PATCHELF}" --replace-needed "libsensorndkbridge.so" "libsensorndkbridge-v30.so" "${2}"
             ;;
     esac
 }

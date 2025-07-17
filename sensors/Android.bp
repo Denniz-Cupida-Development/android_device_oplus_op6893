@@ -14,7 +14,7 @@
 // limitations under the License.
 
 cc_binary {
-    name: "android.hardware.sensors@2.0-service-multihal.mt6893",
+    name: "android.hardware.sensors@2.0-service-multihal.MT6893",
     defaults: [
         "hidl_defaults",
     ],
@@ -26,8 +26,8 @@ cc_binary {
         "HalProxyCallback.cpp",
         "service.cpp",
     ],
-    init_rc: ["android.hardware.sensors@2.0-service-multihal.mt6893.rc"],
-    vintf_fragments: ["android.hardware.sensors@2.0-multihal.mt6893.xml"],
+    init_rc: ["android.hardware.sensors@2.0-service-multihal.MT6893.rc"],
+    vintf_fragments: ["android.hardware.sensors@2.0-multihal.MT6893.xml"],
     header_libs: [
         "android.hardware.sensors@2.X-multihal.header",
         "android.hardware.sensors@2.X-shared-utils",
@@ -51,7 +51,7 @@ cc_binary {
 }
 
 cc_binary { 
-	name: "als_correction_service.mt6893",
+	name: "als_correction_service.MT6893",
 	stem: "als_correction_service", 
 	init_rc: ["als_correction_service.rc"], 
 	system_ext_specific: true, 

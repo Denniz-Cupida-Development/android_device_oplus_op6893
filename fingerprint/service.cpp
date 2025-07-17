@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.mt6893"
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.MT6893"
 
 #include <android-base/logging.h>
 #include <hidl/HidlTransportSupport.h>
