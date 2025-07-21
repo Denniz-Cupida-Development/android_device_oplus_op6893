@@ -2,7 +2,11 @@
     package="org.lineageos.denniz.frameworkresoverlay">
 
     <application android:hasCode="false" />
-    <overlay android:targetPackage="android"
-             android:isStatic="true"
-             android:priority="10"/>
+
+    <overlay
+        android:targetPackage="android"
+        android:isStatic="true"
+        android:priority="10"
+        android:requiredSystemPropertyName="ro.device"
+        android:requiredSystemPropertyValue="denniz" />
 </manifest>

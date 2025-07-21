@@ -423,11 +423,10 @@ PRODUCT_PACKAGES += \
     DozeOverlaySystemUI \
     OplusDozeOverlay \
     OPlusSettingsResTarget \
+    SettingsProviderOverlay \
     FrameworkResOverlayCupida \
-    SettingsProviderOverlayCupida \
     WifiOverlayCupida \
     FrameworkResOverlayDenniz \
-    SettingsProviderOverlayDenniz \
     WifiOverlayDenniz
 
 # Soundtrigger
