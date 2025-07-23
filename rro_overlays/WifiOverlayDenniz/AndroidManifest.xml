@@ -8,6 +8,6 @@
         android:targetName="WifiCustomization"
         android:isStatic="true"
         android:priority="0"
-        android:requiredSystemPropertyName="ro.device"
+        android:requiredSystemPropertyName="ro.vendor.device"
         android:requiredSystemPropertyValue="denniz"/>
 </manifest>
