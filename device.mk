@@ -204,6 +204,9 @@ PRODUCT_PACKAGES += \
 # Init
 $(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):libinit_MT6893)
 
+PRODUCT_PACKAGES += \
+   init_MT6893_vendor
+
 # Keymaster
 PRODUCT_PACKAGES += \
    android.hardware.keymaster-V3-ndk_platform.vendor \
