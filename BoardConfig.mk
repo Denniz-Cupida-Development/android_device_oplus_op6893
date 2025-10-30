@@ -60,6 +60,10 @@ TARGET_NO_BOOTLOADER := true
 # Display
 TARGET_SCREEN_DENSITY := 480
 
+# Display
+TARGET_HAS_WIDE_COLOR_DISPLAY := true
+TARGET_HAS_HDR_DISPLAY := true
+
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE += \
     $(DEVICE_PATH)/configs/vintf/device_framework_matrix.xml
