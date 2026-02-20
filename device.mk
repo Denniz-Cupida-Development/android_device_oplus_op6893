@@ -182,7 +182,7 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,surfaceflinger,has_mtk_udfps,true)
 
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.MT6893
+    android.hardware.biometrics.fingerprint@2.3-service.oplus
 
 # Freeform Multiwindow
 PRODUCT_COPY_FILES += \
@@ -228,7 +228,7 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):libinit_MT6893)
 
 # UDFPS
-$(call soong_config_set,surfaceflinger,udfps_lib,//$(DEVICE_PATH):libudfps_extension.MT6893)
+$(call soong_config_set,surfaceflinger,udfps_lib,//hardware/oplus:libudfps_extension.oplus)
 
 PRODUCT_PACKAGES += \
    init_MT6893_vendor
@@ -467,6 +467,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/pixel \
     hardware/mediatek \
     hardware/mediatek/libmtkperf_client \
+    hardware/oplus \
     $(DEVICE_PATH)
 
 # IMS
