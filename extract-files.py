@@ -14,6 +14,8 @@ from extract_utils.fixups_blob import (
 )
 
 blob_fixups: blob_fixups_user_type = {
+    'system_ext/lib64/libimsma.so': blob_fixup()
+        .replace_needed('libsink.so', 'libsink-mtk.so'),
     'vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service': blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so')
         .replace_needed('libhidlbase.so', 'libhidlbase-v32.so'),
