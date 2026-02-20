@@ -179,6 +179,8 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-lite-3.9.1-vendorcompat
 
 # Fingerprint
+$(call soong_config_set,surfaceflinger,has_mtk_udfps,true)
+
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.3-service.MT6893
 
