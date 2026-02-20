@@ -34,7 +34,7 @@ blob_fixups: blob_fixups_user_type = {
         .sig_replace('34 E8 87 40 B9', '34 28 02 80 52'),
     'vendor/bin/hw/android.hardware.wifi@1.0-service-lazy': blob_fixup()
         .replace_needed('libwifi-hal.so', 'libwifi-hal-mtk.so'),
-    'lib64/libem_support_jni.so': blob_fixup()
+    'system/lib64/libem_support_jni.so': blob_fixup()
         .add_needed('libjni_shim.so'),
     'vendor/lib64/hw/sensors.mt6893.so': blob_fixup()
         .add_needed('libsensors_shim.so'),
