@@ -1409,14 +1409,14 @@ product/priv-app/HotwordEnrollmentXGoogleRISCV/HotwordEnrollmentXGoogleRISCV.apk
 system_ext/bin/vtservice|59adc81ee1ad1f3fb4942cd6e8e7100325002eb2
 system_ext/etc/init/init.vtservice.rc|50a2249906edc06059b443513db47a2ddc0490dc
 system_ext/lib64/libcomutils.so|6d9cd979f33ef01cb26861a38a59e76e1c2a3acb
-system_ext/lib64/libimsma.so|932cbe88083fae23b159bf0e3fe17d7efb93495b
+system_ext/lib64/libimsma.so|981ade90e42a9945390dbef0b68daa85357253ae
 system_ext/lib64/libimsma_adapt.so|754ad1c39fb4dba9d3eb69ac00112e7600d68580
 system_ext/lib64/libimsma_rtp.so|20ee91f090661fb26e6625ad2fef828441956b82
 system_ext/lib64/libimsma_socketwrapper.so|1f9b83322c41e5b0a7b3130f74a38ddb14f578d8
 system_ext/lib64/libmtk_vt_service.so|302d3ab3c5b3fa0107520fe36098b32cd0a8dd96
 system_ext/lib64/libmtk_vt_wrapper.so|af4d486c516c920ea99c362aebbf04180e96035c
 system_ext/lib64/libsignal.so|0f55bb64c660fe4cda2b695121580b054f026e73
-system_ext/lib64/libsink.so:system_ext/lib64/libsink-mtk.so;FIX_SONAME|6bd8c55847116a9a37e223ea2a6e5ce1379e53f7
+system_ext/lib64/libsink.so:system_ext/lib64/libsink-mtk.so;FIX_SONAME|e4c6bf7dca30d5de2a4f7521a97aca51c0f85cfe
 system_ext/lib64/libsource.so|e216e5dedb880f8e3b54cbefaf50277dd6d92c39
 system_ext/lib64/libvcodec_cap.so|6973253cb2e4ddf365451ed2ac8db9d04085bc4a
 system_ext/lib64/libvcodec_capenc.so|5527525dfcd25169bc380ac53d8181ffa1429c6f
@@ -1443,7 +1443,7 @@ system/framework/mediatek-telephony-common.jar
 system/framework/mediatek-telephony-base.jar|9803c5df30b21000f5f473e9395f0fd9c555f0cd
 
 # IMs (Patched Apk) from c.12 RMX3031-user 12 SP1A.210812.016 1663769087038 release-keys 
-system/priv-app/ImsService/ImsService.apk|d9d6e5540b769edcc19157099b834b69e345e5f9
+system/priv-app/ImsService/ImsService.apk|e204eed8f406cb94cb898c0d0c492dae952bef88
 
 # IMS
 odm/lib/vendor.oplus.hardware.ims@1.0.so
@@ -1597,7 +1597,7 @@ vendor/lib64/libvpu.so
 vendor/lib64/libvpu5.so
 
 # Mtkfusionrild - from c.12 RMX3031-user 12 SP1A.210812.016 1663769087038 release-keys
-vendor/bin/hw/mtkfusionrild|a026e560f5af92f8a9a2eb2159394e54e4a55bec
+vendor/bin/hw/mtkfusionrild|8ecf6681fa36185f734dc8a7f3634a9724bd70c6
 
 # Misc
 vendor/etc/slp_conf
