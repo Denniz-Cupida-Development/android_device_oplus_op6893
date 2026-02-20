@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+import re
+from pathlib import Path
+
 from extract_utils.main import (
     ExtractUtils,
     ExtractUtilsModule,
@@ -12,6 +15,26 @@ from extract_utils.fixups_blob import (
     blob_fixup,
     blob_fixups_user_type,
 )
+
+prop_file = Path(__file__).resolve().parent / "proprietary-files.txt"
+
+if prop_file.exists():
+    lines = prop_file.read_text().splitlines()
+    new_lines = []
+
+    for line in lines:
+        if not re.match(r'^[^\s#]', line):
+            new_lines.append(line)
+            continue
+
+        line = re.sub(r';?DISABLE_DEPS', '', line)
+
+        if not re.search(r'\.apk', line):
+            line = re.sub(r'^([^;|\s]+)(\|.*)?', r'\1;DISABLE_DEPS\2', line)
+
+        new_lines.append(line)
+
+    prop_file.write_text("\n".join(new_lines) + "\n")
 
 blob_fixups: blob_fixups_user_type = {
     'system_ext/lib64/libimsma.so': blob_fixup()
@@ -83,3 +106,7 @@ module = ExtractUtilsModule(
 if __name__ == '__main__':
     utils = ExtractUtils.device(module)
     utils.run()
+
+    content = prop_file.read_text()
+    content = re.sub(r';?DISABLE_DEPS', '', content)
+    prop_file.write_text(content)
