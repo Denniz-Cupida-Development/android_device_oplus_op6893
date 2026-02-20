@@ -39,10 +39,10 @@ vendor/lib64/vendor.mediatek.hardware.apuware.xrp@2.0.so
 # Audio
 odm/bin/hw/vendor.oplus.hardware.performance@1.0-service
 odm/etc/init/vendor.oplus.hardware.performance@1.0-service.rc
--odm/etc/vintf/manifest/manifest_oplus_performance.xml
+odm/etc/vintf/manifest/manifest_oplus_performance.xml
 odm/firmware/awinic_haptic_gun_params.bin
 odm/firmware/awinic_haptic_params.bin
--odm/framework/vendor.oplus.hardware.performance-V1.0-java.jar
+odm/framework/vendor.oplus.hardware.performance-V1.0-java.jar
 odm/lib/lib_aurisys_lvimfs.so
 odm/lib/libnxprecord.so
 odm/lib/libnxpsmartpaparser.so
@@ -388,7 +388,7 @@ vendor/lib64/lib3a.af.core.so|0d3c747b1bb8a85289aae1226f9da70927103486
 odm/bin/hw/vendor.oplus.hardware.cammidasservice@1.0-service
 odm/etc/init/init.camera_update.rc
 odm/etc/init/vendor.oplus.hardware.cammidasservice@1.0-service.rc
--odm/etc/vintf/manifest/manifest_oplus_cammidasservice.xml
+odm/etc/vintf/manifest/manifest_oplus_cammidasservice.xml
 odm/lib/liblvimfs.so 
 odm/lib/liblvimfs_wrapper.so
 odm/lib/libstdc++.so;MODULE_SUFFIX=_odm
@@ -1136,11 +1136,11 @@ odm/etc/init/init.oplus.reserve.rc
 odm/etc/init/init.vendor.oplus.connectivity.rc
 
 # charger
-bin/kpoc_charger
-etc/init/kpoc_charger.rc
+system/bin/kpoc_charger
+system/etc/init/kpoc_charger.rc
 odm/bin/hw/vendor.oplus.hardware.charger@1.0-service
 odm/etc/init/vendor.oplus.hardware.charger@1.0-service.rc
--odm/etc/vintf/manifest/manifest_oplus_charger.xml
+odm/etc/vintf/manifest/manifest_oplus_charger.xml
 odm/lib/vendor.oplus.hardware.charger@1.0.so
 odm/lib64/vendor.oplus.hardware.charger@1.0.so
 
@@ -1149,7 +1149,7 @@ odm/lib/liboemcrypto.so
 odm/lib64/liboemcrypto.so
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/lib/mediadrm/libwvdrmengine.so
 vendor/lib/libtlcWidevineModularDrm.so
 vendor/lib/liburee_meta_drmkeyinstall.so
@@ -1169,7 +1169,7 @@ vendor/lib64/vendor.mediatek.hardware.dmc@1.2.so
 # Display
 vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
--vendor/etc/vintf/manifest/manifest_hwcomposer.xml
+vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/lib/hw/mt6893/android.hardware.graphics.allocator@4.0-impl-mediatek.so;SYMLINK=vendor/lib/hw/android.hardware.graphics.allocator@4.0-impl-mediatek.so
 vendor/lib/hw/mt6893/android.hardware.graphics.mapper@4.0-impl-mediatek.so;SYMLINK=vendor/lib/hw/android.hardware.graphics.mapper@4.0-impl-mediatek.so
 vendor/lib/mt6893/arm.graphics-V1-ndk_platform.so;SYMLINK=vendor/lib/arm.graphics-V1-ndk_platform.so
@@ -1255,15 +1255,15 @@ vendor/firmware/soc3_0_ram_wmmcu_1a_1_hdr.bin
 vendor/firmware/valhall-1691526.wa
 
 # EngineerMode
-lib/libem_support_jni.so
-lib64/libem_support_jni.so
+system/lib/libem_support_jni.so
+system/lib64/libem_support_jni.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.0.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.1.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.2.so
 vendor/lib64/vendor.mediatek.hardware.engineermode@1.3.so
 
 # Pin patched activity exported engineer mode
--priv-app/EngineerMode/EngineerMode.apk|9c90462d8caf098ce923bb947a58e49ca13be579
+system/priv-app/EngineerMode/EngineerMode.apk|9c90462d8caf098ce923bb947a58e49ca13be579
 
 # Extra
 odm/lib/libosensehalclient.so
@@ -1276,7 +1276,7 @@ vendor/lib64/libnxp_extamp_intf.so
 # Fingerprint
 odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
 odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc
--odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml
+odm/etc/vintf/manifest/manifest_oplus_fingerprint.xml
 odm/lib64/hw/fingerprint.focaltech.default.so
 odm/lib64/hw/fingerprint.goodix_G2.default.so
 odm/lib64/hw/fingerprint.goodix_G3.default.so
@@ -1410,9 +1410,9 @@ odm/lib/libwvhdcpext.so|362e59249d2c71f18a9638220a99c23ede2ad0d1
 odm/lib64/libwvhdcpext.so|96858d43c8a786b25b9da193602edfa99bda15f6
 
 # Hotword Enrollment - from mt6893
--system_ext/framework/com.android.hotwordenrollment.common.util.jar|5ea17315d96f9320e487450ff5812ea7641df2dc
--product/priv-app/HotwordEnrollmentOKGoogleRISCV/HotwordEnrollmentOKGoogleRISCV.apk|29f366971d42b0793e8b62d20f259fe6afda0c2e
--product/priv-app/HotwordEnrollmentXGoogleRISCV/HotwordEnrollmentXGoogleRISCV.apk|951d6f43b5965d6d52609dc60c0cb811d5beb93f
+system_ext/framework/com.android.hotwordenrollment.common.util.jar|5ea17315d96f9320e487450ff5812ea7641df2dc
+product/priv-app/HotwordEnrollmentOKGoogleRISCV/HotwordEnrollmentOKGoogleRISCV.apk|29f366971d42b0793e8b62d20f259fe6afda0c2e
+product/priv-app/HotwordEnrollmentXGoogleRISCV/HotwordEnrollmentXGoogleRISCV.apk|951d6f43b5965d6d52609dc60c0cb811d5beb93f
 
 # IMS - from TECNO-CK9n UP1A.230519.001
 system_ext/bin/vtservice|59adc81ee1ad1f3fb4942cd6e8e7100325002eb2
@@ -1438,21 +1438,21 @@ vendor/lib64/hw/vendor.mediatek.hardware.videotelephony@1.0-impl.so|bb9ff554802e
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor|5e228669d2c575e38fc02a13404f31bc22494b87
 
 # IMS (framework)
--framework/mediatek-common.jar
--framework/mediatek-framework.jar
--framework/mediatek-ims-base.jar
--framework/mediatek-ims-common.jar
--framework/mediatek-ims-extension-plugin.jar
--framework/mediatek-services.jar
--framework/mediatek-carrier-config-manager.jar
--framework/mediatek-telecom-common.jar
--framework/mediatek-telephony-common.jar
+system/framework/mediatek-common.jar
+system/framework/mediatek-framework.jar
+system/framework/mediatek-ims-base.jar
+system/framework/mediatek-ims-common.jar
+system/framework/mediatek-ims-extension-plugin.jar
+system/framework/mediatek-services.jar
+system/framework/mediatek-carrier-config-manager.jar
+system/framework/mediatek-telecom-common.jar
+system/framework/mediatek-telephony-common.jar
 
 # IMS (Patched framework)
--framework/mediatek-telephony-base.jar|9803c5df30b21000f5f473e9395f0fd9c555f0cd
+system/framework/mediatek-telephony-base.jar|9803c5df30b21000f5f473e9395f0fd9c555f0cd
 
 # IMs (Patched Apk) from c.12 RMX3031-user 12 SP1A.210812.016 1663769087038 release-keys 
--priv-app/ImsService/ImsService.apk|d9d6e5540b769edcc19157099b834b69e345e5f9
+system/priv-app/ImsService/ImsService.apk|d9d6e5540b769edcc19157099b834b69e345e5f9
 
 # IMS
 odm/lib/vendor.oplus.hardware.ims@1.0.so
@@ -1463,7 +1463,7 @@ vendor/bin/volte_clientapi_ua
 vendor/bin/volte_rcs_ua
 vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
 vendor/etc/init/volte_clientapi_ua.rc
--vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
+vendor/etc/vintf/manifest/lbs_hidl_service@1.0.xml
 vendor/lib/libipsec_ims_shr.so
 vendor/lib/librcs_interface.so
 vendor/lib/librcs_volte_core.so
@@ -1499,8 +1499,8 @@ vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 
 # Libraries
-etc/public.libraries-mtk.txt
-etc/public.libraries-trustonic.txt
+system/etc/public.libraries-mtk.txt
+system/etc/public.libraries-trustonic.txt
 
 # Listen
 vendor/lib/hw/sound_trigger.primary.default.so
@@ -1514,7 +1514,7 @@ vendor/bin/replayevent
 vendor/bin/vpud
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
 vendor/etc/init/vpud.rc
--vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
+vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
 vendor/etc/mpe.conf
 vendor/lib/AV1SecureVdecCA.so
 vendor/lib/AVCSecureVdecCA.so
@@ -1736,7 +1736,7 @@ vendor/etc/xgf.cfg
 # Neural-networks
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-mtk-neuron.rc
--vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-mtk-mdla-dsp-gpu.xml
+vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-mtk-mdla-dsp-gpu.xml
 vendor/lib/mt6893/libneuron_platform.vpu.so;SYMLINK=vendor/lib/libneuron_platform.vpu.so
 vendor/lib/libcmdl.so
 vendor/lib/libcmdl_ndk.mtk.vndk.so
@@ -1952,7 +1952,7 @@ vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
 odm/bin/hw/vendor.oplus.hardware.oplusSensor@1.0-service
 odm/etc/init/vendor.oplus.hardware.oplusSensor@1.0-service.rc
 odm/etc/sensor/sensor_config.json
--odm/etc/vintf/manifest/manifest_oplusSensor.xml
+odm/etc/vintf/manifest/manifest_oplusSensor.xml
 odm/lib/vendor.oplus.hardware.oplusSensor@1.0.so
 odm/lib64/vendor.oplus.hardware.oplusSensor@1.0.so
 odm/lib64/oplus.sensors.ssc.so
@@ -2076,4 +2076,4 @@ vendor/lib64/libapmonitor_vendor.so
 vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib64/vendor.mediatek.hardware.mdmonitor@1.0.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
--vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
+vendor/etc/vintf/manifest/android.hardware.wifi@1.0-service.xml
