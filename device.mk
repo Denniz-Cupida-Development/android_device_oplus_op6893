@@ -495,7 +495,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcrypto-v32 \
     libssl-v32 \
-    libhidlbase-v32 \
+    libhidlbase-v32.vendor \
     libstagefright_foundation_v33 \
     libtinyalsa-v32
 
