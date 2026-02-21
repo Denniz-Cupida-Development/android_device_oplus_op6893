@@ -498,6 +498,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcrypto-v32 \
     libssl-v32 \
+    libtinyxml2-v34 \
     libutils-v32 \
     libhidlbase-v32.vendor \
     libstagefright_foundation_v33 \
