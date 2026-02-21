@@ -83,7 +83,7 @@ blob_fixups: blob_fixups_user_type = {
             b'OnScreenFingerprintPressedIcon',
             b'SurfaceView[UdfpsControllerOve'
     ),
-    'vendor/lib*/libmtkcam_stdutils.so': blob_fixup()
+    'vendor/lib64/libmtkcam_stdutils.so': blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so'),
     'vendor/bin/hw/camerahalserver': blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so')
