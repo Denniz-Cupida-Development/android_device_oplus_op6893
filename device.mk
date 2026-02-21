@@ -49,6 +49,7 @@ PRODUCT_PACKAGES += \
     FrameworkResOverlayDenniz \
     FrameworkResOverlayPlatform \
     OplusDozeOverlay \
+    Launcher3DeviceOverlay \
     SettingsOverlayPlatform \
     SettingsProviderOverlay \
     SystemUIOverlayPlatform \
