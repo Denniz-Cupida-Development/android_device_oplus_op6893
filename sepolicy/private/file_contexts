@@ -1,2 +1,0 @@
-# Alert slider
-/system/bin/service                                                             u:object_r:service_call_exec:s0
