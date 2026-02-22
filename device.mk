@@ -57,7 +57,8 @@ PRODUCT_PACKAGES += \
     TetheringConfigOverlay \
     WifiOverlay \
     WifiOverlayCupida \
-    WifiOverlayDenniz
+    WifiOverlayDenniz \
+    LineageSDKOverlayDenniz
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
