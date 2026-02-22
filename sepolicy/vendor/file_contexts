@@ -82,3 +82,6 @@
 
 # Perfmgr
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.pixel-libperfmgr                       u:object_r:hal_power_default_exec:s0
+
+# Alert Slider
+/(vendor|system/vendor)/bin/tri-state-key-calibrate                                                     u:object_r:tri-state-key-calibrate_exec:s0

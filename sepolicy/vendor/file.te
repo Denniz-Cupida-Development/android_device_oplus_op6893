@@ -62,3 +62,6 @@ type proc_sched_assist, fs_type, proc_type;
 
 # GPU
 type vendor_sysfs_gpu, fs_type, sysfs_type;
+
+# Alert Slider
+type vendor_proc_tri_state_key, fs_type, proc_type;
