@@ -58,7 +58,8 @@ PRODUCT_PACKAGES += \
     WifiOverlay \
     WifiOverlayCupida \
     WifiOverlayDenniz \
-    LineageSDKOverlayDenniz
+    LineageSDKOverlayDenniz \
+    KeyHandlerOverlay
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
