@@ -102,7 +102,7 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'MT6893',
+    'op6893',
     'oplus',
     blob_fixups=blob_fixups,
 )

@@ -19,16 +19,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit from device makefile
-$(call inherit-product, device/oplus/MT6893/device.mk)
+$(call inherit-product, device/oplus/op6893/device.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_MT6893
-PRODUCT_DEVICE := MT6893
+PRODUCT_NAME := lineage_op6893
+PRODUCT_DEVICE := op6893
 PRODUCT_BRAND := Oplus
-PRODUCT_MODEL := MT6893
+PRODUCT_MODEL := op6893
 PRODUCT_MANUFACTURER := Oplus
 
 # Build info

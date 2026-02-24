@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/oplus/MT6893
+DEVICE_PATH := device/oplus/op6893
 
 # Installs gsi keys into ramdisk, to boot a GSI with verified boot.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
@@ -234,13 +234,13 @@ PRODUCT_PACKAGES += \
    android.hardware.health@2.1-impl
 
 # Init
-$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):libinit_MT6893)
+$(call soong_config_set,libinit,vendor_init_lib,//$(DEVICE_PATH):libinit_op6893)
 
 # UDFPS
 $(call soong_config_set,surfaceflinger,udfps_lib,//hardware/oplus:libudfps_extension.oplus)
 
 PRODUCT_PACKAGES += \
-   init_MT6893_vendor
+   init_op6893_vendor
 
 # Keymaster
 PRODUCT_PACKAGES += \
@@ -451,8 +451,8 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-service-multihal.MT6893 \
-    als_correction_service.MT6893 \
+    android.hardware.sensors@2.0-service-multihal.op6893 \
+    als_correction_service.op6893 \
     android.hardware.sensors@1.0.vendor \
     android.hardware.sensors@2.0.vendor \
     android.hardware.sensors@2.1.vendor \
@@ -555,4 +555,4 @@ PRODUCT_PACKAGES += \
     libshim
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/oplus/MT6893/MT6893-vendor.mk)
+$(call inherit-product, vendor/oplus/op6893/op6893-vendor.mk)

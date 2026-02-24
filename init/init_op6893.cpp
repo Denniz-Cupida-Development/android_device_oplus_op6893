@@ -78,9 +78,9 @@ void vendor_load_properties() {
             fingerprint = "OnePlus/DN2103EEA/OP515BL1:13/TP1A.220905.001/R.108b2c1-1:user/release-keys";
         }
         else {
-            device = "mt6893";
-            model = "mt6893";
-            fingerprint = "lineage/lineage_mt6893/mt6893:13/TP1A.220905.001/eng.user.20230710.184518:userdebug/test-keys";
+            device = "op6893";
+            model = "op6893";
+            fingerprint = "lineage/lineage_op6893/op6893:13/TP1A.220905.001/eng.user.20230710.184518:userdebug/test-keys";
             LOG(WARNING) << "Unknown prjName: " << prj_name;
         }
     }

@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-DEVICE_PATH := device/oplus/MT6893
+DEVICE_PATH := device/oplus/op6893
 
 # Architecture
 TARGET_ARCH := arm64
