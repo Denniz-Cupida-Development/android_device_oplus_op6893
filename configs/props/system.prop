@@ -13,6 +13,10 @@ ro.config.vc_call_vol_steps=7
 # Brand
 Build.BRAND=MTK
 
+# Camera
+ro.oplus.system.camera.name=com.oplus.camera
+oplus.camera.packname=com.oplus.camera
+
 # Dalvik
 dalvik.vm.ps-min-first-save-ms=150000
 dalvik.vm.image-dex2oat-Xms=64m
