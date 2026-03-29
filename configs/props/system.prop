@@ -145,3 +145,6 @@ persist.sys.usb.config=mtp,adb
 persist.camera.HAL3.enabled=1
 persist.camera.eis.enabled=1
 ro.camera.sound.forced=0
+
+# Lunaris
+ro.lunaris.maintainer=Rakhshan

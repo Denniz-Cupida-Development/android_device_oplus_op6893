@@ -266,6 +266,10 @@ ro.vendor.mtk_data_config=1
 ro.vendor.mtk_eccci_c2k=1
 persist.vendor.md_c2k_cap_dep_check=0
 
+# Scroll Optimizer 
+persist.sys.perf.scroll_opt=true
+persist.sys.perf.scroll_opt.heavy_app=1
+
 # Storage
 ro.vendor.mtk_f2fs_enable=1
 ro.vendor.mtk_emmc_support=1

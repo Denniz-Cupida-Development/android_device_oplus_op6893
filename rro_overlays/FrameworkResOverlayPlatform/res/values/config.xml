@@ -450,6 +450,9 @@
 
     <!-- Blur radius behind Notification Shade -->
     <dimen name="max_shade_window_blur_radius">17dp</dimen>
+    
+    <!-- Whether the device supports Smart Pixels -->
+    <bool name="config_supportSmartPixels">true</bool>
 
     <!-- Burn-in potection in true ambient mode. -->
     <bool name="config_enableBurnInProtection">true</bool>        
