@@ -41,9 +41,6 @@
     <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_24GHz">-73</integer>
     <integer name="config_wifi_framework_wifi_score_low_rssi_threshold_5GHz">-70</integer>
 
-   <!-- boolean indicating whether the WiFi chipset has 6GHz band support -->
-    <bool translatable="false" name="config_wifi6ghzSupport">true</bool>
-
     <!-- Wifi driver supports IEEE80211AC for softap -->
     <bool translatable="false" name="config_wifi_softap_ieee80211ac_supported">true</bool>
 
