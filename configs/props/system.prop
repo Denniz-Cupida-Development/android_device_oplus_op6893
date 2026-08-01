@@ -60,6 +60,10 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 
+# Infinity X
+ro.infinity.battery=4500 mAh
+ro.infinity.soc=Mediatek Dimensity 1200
+
 # IPO
 sys.ipo.pwrdncap=2
 sys.ipo.disable=1

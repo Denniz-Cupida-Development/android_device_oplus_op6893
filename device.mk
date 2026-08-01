@@ -433,6 +433,7 @@ PRODUCT_PACKAGES += \
     init.sensor_2_0.rc \
     init.target.rc \
     init_conninfra.rc \
+    init.infinity.rc \
     fstab.mt6893 \
     fstab.mt6893.ramdisk \
     ueventd.oplus.rc \
