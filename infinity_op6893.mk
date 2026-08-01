@@ -21,19 +21,20 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from device makefile
 $(call inherit-product, device/oplus/op6893/device.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common Infinity stuff.
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-# EvolutionX Flags
-EVO_BUILD_TYPE := Official
+# Infinity-X Specific Flags
+INFINITY_MAINTAINER := "Rakhshan"
+PERF_ANIM_OVERRIDE := true
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_BUILD_APERTURE_CAMERA := false
 TARGET_HAS_UDFPS := true
 TARGET_SUPPORTS_QUICK_TAP := true
-PERF_ANIM_OVERRIDE := true
+WITH_GAPPS := true
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_op6893
+PRODUCT_NAME := infinity_op6893
 PRODUCT_DEVICE := op6893
 PRODUCT_BRAND := Oplus
 PRODUCT_MODEL := op6893
